@@ -1,0 +1,15 @@
+<div class="kpi-grid">
+  <app-kpi-card
+    *ngFor="let kpi of kpis"
+    [title]="kpi.title"
+    [value]="kpi.value">
+  </app-kpi-card>
+</div>
+
+<div class="chart-section">
+  <canvas baseChart
+    [data]="revenueData"
+    [options]="revenueOptions"
+    [type]="'line'">
+  </canvas>
+</div>
